@@ -26,7 +26,7 @@ def calcular(operando_1:float, operando_2:float):
     return {'suma: ':operando_1 + operando_2}
 
 '''
-para acceder a la DOCUMENTACION INTERACTIVA: http://127.0.0.1:4007/docs
+Para acceder a la DOCUMENTACION INTERACTIVA: http://127.0.0.1:4007/docs
 
 '''
 
