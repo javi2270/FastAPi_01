@@ -1,15 +1,9 @@
-from typing import Union
 from fastapi import FastAPI
-from pydantic import BaseModel
+from typing import Union
 
+from models.item_model import Item
 
 app = FastAPI()
-class Item(BaseModel):
-    name:str
-    price:float
-    is_offert: Union[bool,None]= None
-    
-
 
 @app.get("/")
 def read_root():
@@ -27,7 +21,7 @@ def read_id(item_id: int, q: Union[str, None] = None ):
     return {'item_id :': item_id, "q:":q }  
 
 
-#       de Consulta "?","&"
+#      de Consulta "?","&"
 @app.get('/calculadora')
 def calcular(operando_1:float, operando_2:float):
     return {'suma: ':operando_1 + operando_2}
