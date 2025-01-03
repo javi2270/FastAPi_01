@@ -1,8 +1,11 @@
 from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/feature/javi5023
 
 app = FastAPI()
 class Item(BaseModel):
@@ -11,6 +14,14 @@ class Item(BaseModel):
     is_offert: Union[bool,None]= None
     
 
+class Item(BaseModel):
+    name: str
+    
+    price: float
+    
+    is_offer: Union[bool, None]= None
+    
+    
 
 @app.get("/")
 def read_root():
@@ -39,7 +50,7 @@ def uodate_item(item_id: int, item: Item):
     return {'item_name': item.name, 'item_id': item_id, 'item_price': item.price}
 
 '''
-para acceder a la DOCUMENTACION INTERACTIVA: http://127.0.0.1:4007/docs
+Para acceder a la "Documentacion Interactiva" : http://127.0.0.1:4007/docs
 
 '''
 
